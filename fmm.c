@@ -52,5 +52,8 @@ void fmm(int n, int* m1, int* m2, int* result) {
             }
         }
     }
+
+    free(a);
+    free(b);
 }
 
