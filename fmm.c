@@ -31,8 +31,8 @@ void fmm(int n, int* m1, int* m2, int* result) {
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
             // a and b are arrays of vectors of len 8
-            a[i*n + j][j % 8] = m1[i*n + j];
-            b[i*n + j][j % 8] = m2[j*n + i];
+            a[i*n + j/8][j % 8] = m1[i*n + j];
+            b[i*n + j/8][j % 8] = m2[j*n + i];
         }
     }
 
